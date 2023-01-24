@@ -186,6 +186,11 @@ jobs:
               --output text)
             echo $BACKEND_PUBLIC_IP >> .circleci/ansible/inventory.txt
             cat .circleci/ansible/inventory.txt
+      # CircleCI requires tar to attach workspace, aws-cli does not have it installed by default
+      - run:
+          name: Install tar utility
+          command: |
+            yum install -y tar gzip
       - persist_to_workspace:
           root: ~/
           paths:
