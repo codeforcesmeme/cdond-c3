@@ -1,1 +1,5 @@
-https://github.com/codeforcesmeme/cdond-c3
+URL01       https://github.com/codeforcesmeme/cdond-c3
+URL02       http://udapeople-3c3db04.s3-website-us-east-1.amazonaws.com
+
+backend     http://ec2-54-146-172-98.compute-1.amazonaws.com:3030/api/status
+prometheus  http://52.90.12.242:9090/targets?search=
