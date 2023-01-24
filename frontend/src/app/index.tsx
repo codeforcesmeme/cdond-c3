@@ -16,6 +16,7 @@ export class Root extends React.Component<Props, State> {
 
   componentDidMount() {
     setTimeout(() => this.setState({ showLoader: false }), 1000);
+    console.log('Root mounted');
   }
   render() {
     return (
