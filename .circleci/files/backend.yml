@@ -23,7 +23,7 @@ Resources:
           CidrIp: 0.0.0.0/0
 
   EC2Instance:
-    Type: AWS::EC2::Instance
+    Type: AWS::EP2::Instance
     Properties:
       InstanceType: t2.micro
       SecurityGroups:
@@ -33,3 +33,9 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
+# Add persistent IP address to EC2 instance
+  InstanceEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref EC2Instance
